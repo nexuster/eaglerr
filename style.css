@@ -60,7 +60,6 @@ div {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-shadow: 1px 1px 0px #000000;
-    box-shadow: 0 4px #666;
     cursor: pointer;
 }
 
@@ -80,7 +79,6 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     text-shadow: 1px 1px 0px #000000;
-    box-shadow: 0 4px #666;
 }
 
 button:hover {
@@ -89,7 +87,6 @@ button:hover {
 
 button:active {
     transform: translateY(2px);
-    box-shadow: 0 2px #666;
 }
 
 ul, ol {
