@@ -1,10 +1,7 @@
-@font-face {
-    font-family: 'Minecraft';
-    src: url('images/Minecraft.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
 
 body {
-    font-family: 'Minecraft';
+    font-family: 'Micro 5', cursive;
     background: url('images/splash.webp') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
@@ -61,7 +58,7 @@ a:visited {
 }
 
 #eaglerDropdown {
-    font-family: 'Minecraft';
+    font-family: 'Micro 5', cursive;
     background-color: #2b2b2b;
     color: #ffffff;
     border: 2px solid #00ff00;
@@ -71,7 +68,7 @@ a:visited {
 }
 
 button {
-    font-family: 'Minecraft';
+    font-family: 'Micro 5', cursive;
     background: url('images/button.png') no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
@@ -86,6 +83,8 @@ button {
 button:hover {
     background: url('images/button.png') no-repeat;
     background-size: 100% 100%;
+    border-radius: 5px;
+    border-color: #ffffff;
 }
 
 button:active {
