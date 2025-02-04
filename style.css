@@ -39,7 +39,7 @@ div {
 div {
     background-color: white;
     height: 100vh;
-    width: calc(240vw - 480px);
+    width: calc(120vw - 480px);
 }
 
 .servlist {
