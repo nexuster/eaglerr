@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+@import url('https://github.com/nexuster/eaglerr/blob/main/images/minecraft.ttf');
 
 body {
-    font-family: 'Micro 5', cursive;
+    font-family: 'minecraft', cursive;
     background: url('images/splash.webp') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
@@ -58,7 +58,6 @@ a:visited {
 }
 
 #eaglerDropdown {
-    font-family: 'Micro 5', cursive;
     background-color: #2b2b2b;
     color: #ffffff;
     border: 2px solid #00ff00;
@@ -68,16 +67,12 @@ a:visited {
 }
 
 button {
-    font-family: 'Micro 5', cursive;
     background: url('images/button.png') no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
     cursor: pointer;
     text-shadow: 1px 1px 0px #000000;
-    box-shadow: 0 4px #666;
 }
 
 button:hover {
@@ -89,7 +84,6 @@ button:hover {
 
 button:active {
     transform: translateY(2px);
-    box-shadow: 0 2px #666;
 }
 
 ul, ol {
