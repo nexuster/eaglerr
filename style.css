@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
 
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Micro 5', sans-serif;
+    font-size: 1.2em; /* Scaled up a bit */
     background: url('images/splash.webp') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
@@ -48,16 +49,30 @@ div {
 }
 
 #eaglerDropdown {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #2b2b2b;
+    font-family: 'Micro 5', sans-serif;
+    background: url('images/button.png') no-repeat center center;
+    background-size: cover;
     color: #ffffff;
-    border: 2px solid #00ff00;
+    border: none;
     padding: 10px;
     margin: 10px 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-shadow: 1px 1px 0px #000000;
+    box-shadow: 0 4px #666;
+    cursor: pointer;
+}
+
+#eaglerDropdown option {
+    font-family: 'Micro 5', sans-serif;
+    background: rgba(59, 59, 59, 0.9);
+    color: #ffffff;
+    text-shadow: 1px 1px 0px #000000;
 }
 
 button {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Micro 5', sans-serif;
     background: url('images/button.png') no-repeat center center;
     background-size: cover;
     color: #ffffff;
@@ -65,16 +80,16 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     text-shadow: 1px 1px 0px #000000;
+    box-shadow: 0 4px #666;
 }
 
 button:hover {
-    background: url('images/button.png') no-repeat center center;
-    background-size: cover;
     border: 2px solid #ffffff;
 }
 
 button:active {
     transform: translateY(2px);
+    box-shadow: 0 2px #666;
 }
 
 ul, ol {
