@@ -41,12 +41,13 @@ div {
 }
 
 .splash {
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    /*filter: blur(8px);
+    -webkit-filter: blur(8px);*/
 
-    height: 100%;
+    height: 120%;
+    width: 120%;
     
-    position: sticky;
+    position: sticky, center;
     /*repeat: no-repeat;*/
     object-fit: cover;
     z-index: -2;
