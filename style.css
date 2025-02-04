@@ -38,8 +38,8 @@ div {
 
 div {
     background-color: white;
-    height: 100vh;
-    width: calc(120vw - 480px);
+    /*height: 100vh;*/
+    width: calc(50vw - 480px);
 }
 
 .servlist {
