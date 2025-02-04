@@ -41,7 +41,6 @@ div {
 }
 
 .splash {
-    background-image: url("images/splash.webp");
     filter: blur(8px);
     -webkit-filter: blur(8px);
 
@@ -52,5 +51,5 @@ div {
     background-size: cover;
     z-index: 0;
 
-    position: relative;
+    position: absolute;
 }
