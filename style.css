@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+    font-family: 'Minecraft';
+    src: url('images/Minecraft.ttf') format('truetype');
+}
 
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Minecraft', sans-serif;
     background: url('images/splash.webp') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
@@ -34,22 +37,31 @@ a:visited {
     color: #00ff00;
 }
 
-div {
-    display: block;
-    padding: 20px;
+.container {
     background-color: rgba(43, 43, 43, 0.9);
+    border: 2px solid #000000;
     border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    display: inline-block;
     margin: 20px auto;
+    padding: 20px;
     width: 80%;
     max-width: 800px;
 }
 
 .servlist {
     background-color: rgba(59, 59, 59, 0.9);
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
 }
 
 #eaglerDropdown {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Minecraft', sans-serif;
     background-color: #2b2b2b;
     color: #ffffff;
     border: 2px solid #00ff00;
@@ -59,7 +71,7 @@ div {
 }
 
 button {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Minecraft', sans-serif;
     background: url('images/button.png') no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
@@ -68,6 +80,7 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     text-shadow: 1px 1px 0px #000000;
+    box-shadow: 0 4px #666;
 }
 
 button:hover {
@@ -77,6 +90,7 @@ button:hover {
 
 button:active {
     transform: translateY(2px);
+    box-shadow: 0 2px #666;
 }
 
 ul, ol {
