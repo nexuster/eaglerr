@@ -11,32 +11,28 @@ h1 {
 }
 
 a {
-    /* text-decoration: none; */
+    text-decoration: none;
     font-style: oblique;
     color: dodgerblue;
 }
 
 a:hover {
-    /* text-decoration: none; */
     text-decoration: underline;
     font-style: oblique;
     color: rgb(0, 68, 255);
 }
 
 a:visited {
-    /* text-decoration: none; */
     text-decoration: underline;
-    font-style: oblique, italic;
+    font-style: oblique;
     color: rgb(162, 0, 255);
 }
 
 div {
     display: inline-block;
     padding: 12px;
-    z-index: 2;
     background-color: white;
-    /*height: 100vh;*/
-    max-width: 120;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -45,18 +41,11 @@ div {
 }
 
 .splash {
-    /*filter: blur(8px);
-    -webkit-filter: blur(8px);*/
-
-    height: 120% auto;
-    width: 120%;
-    
+    height: 100vh;
+    width: 100%;
     position: sticky;
-    /*repeat: no-repeat;*/
     object-fit: cover;
-    z-index: -2;
-
     top: 0;
     margin: 0 auto;
-    position: absolute;
+    z-index: -2;
 }

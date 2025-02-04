@@ -10,15 +10,15 @@
     </div>
     <div class="selection">
       <h1>Choose your Eagler! (Regularly updated)</h1>
-      <br>
-      <p>Eaglercraft 1.8.8 (No longer availble for Chromebook)</p>
-      <a href="clients/X1-8-u49.html">EaglercraftX 1.8 (Full access to all things)</a>
-      <ul><a href="clients/eaglerX1-8.html">u48 version</a></ul>
-      <br>
-      <a href="clients/index.html">Eaglercraft 1.5.2 (Some servers like Zentic are unavailable)</a>
-      <br>
+      <label for="eaglerDropdown">Select Eagler Version:</label>
+      <select id="eaglerDropdown">
+        <option value="clients/X1-8-u49.html">EaglercraftX 1.8 (Full access to all things)</option>
+        <option value="clients/eaglerX1-8.html">EaglercraftX 1.8 u48 version</option>
+        <option value="clients/index.html">Eaglercraft 1.5.2 (Some servers like Zentic are unavailable)</option>
+      </select>
+      <button id="launchButton">Launch</button>
       <p>That is all for now. Have fun!! <br>
-      If you want access to the standalone files to the eaglercraft clients, visit this website's <a href="https://github.com/nexuster/eaglerr">repository</a>.
+      If you want access to the standalone files to the Eaglercraft clients, visit this website's <a href="https://github.com/nexuster/eaglerr">repository</a>.
       </p>
     </div>
     <div class="servlist">Servers you could join (Using <a href="clients/X1-8-u49.html">EaglercraftX 1.8</a>):
@@ -31,22 +31,27 @@
       </ul>
       <p><br>These are the first five servers taken from this <a href="https://youtu.be/5GodZPECIpE">Youtube Video</a>.</p>
       <br>
-      <p><h2>If you're unsure how to join these servers, follow these instructions:</h2>
-        <ol>
-          <li>
-            Copy specifically the address of the server<br><img src="images/instruct/copy.png"/>
-          </li>
-          <li>
-            Open preferrably <a href="clients/X1-8-u49.html">EaglercraftX 1.8</a><br><img src="images/instruct/eaglerx.png"/>
-          </li>
-          <li>
-            Press the "Multiplayer" button and navigate to "Add Server" and insert your server address in the second input<br><img src="images/instruct/add.png"/>
-          </li>
-          <li>
-            After clicking done, your server should appear and you're good to go!<br><img src="images/instruct/done.png"/>
-          </li>
-        </ol>
-      </p>
+      <h2>If you're unsure how to join these servers, follow these instructions:</h2>
+      <ol>
+        <li>
+          Copy specifically the address of the server<br><img src="images/instruct/copy.png"/>
+        </li>
+        <li>
+          Open preferably <a href="clients/X1-8-u49.html">EaglercraftX 1.8</a><br><img src="images/instruct/eaglerx.png"/>
+        </li>
+        <li>
+          Press the "Multiplayer" button and navigate to "Add Server" and insert your server address in the second input<br><img src="images/instruct/add.png"/>
+        </li>
+        <li>
+          After clicking done, your server should appear and you're good to go!<br><img src="images/instruct/done.png"/>
+        </li>
+      </ol>
     </div>
+    <script>
+      document.getElementById('launchButton').addEventListener('click', function() {
+        var selectedVersion = document.getElementById('eaglerDropdown').value;
+        window.location.href = selectedVersion;
+      });
+    </script>
   </body>
 </html>
