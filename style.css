@@ -32,7 +32,6 @@ a:visited {
 
 div {
     display: inline-block;
-    position: absolute;
     padding: 12px;
     z-index: 2;
 }
