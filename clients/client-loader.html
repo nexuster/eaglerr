@@ -138,7 +138,7 @@
 
         window.onload = function() {
             var urlParams = new URLSearchParams(window.location.search);
-            var gameToLoad = urlParams.get('game');
+            var gameToLoad = './' + urlParams.get('game');
             if (gameToLoad) {
                 // Display the loading screen
                 var loadingScreen = document.getElementById('loadingScreen');
