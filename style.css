@@ -52,4 +52,6 @@ div {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
+
+    position: relative;
 }
