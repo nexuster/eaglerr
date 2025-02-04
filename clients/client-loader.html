@@ -56,6 +56,40 @@
             font-size: 2em;
             z-index: 9999;
         }
+        .load-fallback {
+            position: fixed;
+            bottom: -100px;
+            right: 20px;
+            background-color: rgba(43, 43, 43, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: bottom 0.5s;
+            z-index: 10000;
+        }
+        .load-fallback.show {
+            bottom: 20px;
+        }
+        .load-fallback button {
+            font-family: 'Micro 5', sans-serif;
+            background: url('../images/button.png') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-shadow: 1px 1px 0px #000000;
+            margin-left: 10px;
+        }
+        .load-fallback .close-btn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +101,11 @@
         <button class="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
     </div>
     <div class="loading-screen" id="loadingScreen">Loading...</div>
+    <div class="load-fallback" id="loadFallback">
+        If the viewport doesn’t load the game, you can try loading it here:
+        <button onclick="loadGameManually()">Go</button>
+        <button class="close-btn" onclick="closeFallback()">X</button>
+    </div>
     <script>
         function returnHome() {
             window.location.href = '../index.html';
@@ -83,6 +122,17 @@
             } else if (elem.msRequestFullscreen) { // IE/Edge
                 elem.msRequestFullscreen();
             }
+        }
+
+        function loadGameManually() {
+            var gameToLoad = localStorage.getItem('gameToLoad');
+            if (gameToLoad) {
+                window.location.href = gameToLoad;
+            }
+        }
+
+        function closeFallback() {
+            document.getElementById('loadFallback').style.display = 'none';
         }
 
         window.onload = function() {
@@ -103,6 +153,12 @@
                     loadingScreen.style.display = 'none';
                 };
                 document.getElementById('gameViewport').appendChild(gameIframe);
+
+                // Show load fallback after 5 seconds
+                setTimeout(function() {
+                    var loadFallback = document.getElementById('loadFallback');
+                    loadFallback.classList.add('show');
+                }, 5000);
 
                 // Clear the game data from local storage
                 localStorage.removeItem('gameToLoad');
