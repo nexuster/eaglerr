@@ -32,7 +32,7 @@ a:visited {
 
 div {
     display:inline-block;
-    margin: 110%;
+    padding: 12px;
 }
 
 .servlist {
