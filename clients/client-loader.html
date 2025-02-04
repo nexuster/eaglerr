@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="../style.css"/>
+        <style>
+            body {
+                background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWex3w7YATdVV9dMQOgR6fV72ZuR2K4J-YFA&s') no-repeat center center fixed;
+                background-size: cover;
+                margin: 0;
+                padding: 0;
+                font-family: 'Micro 5', sans-serif;
+                color: #ffffff;
+            }
+            .above-game {
+                padding: 20px;
+                background-color: rgba(43, 43, 43, 0.9);
+                text-align: center;
+            }
+            .game-viewport {
+                margin: 20px auto;
+                width: 80%;
+                max-width: 800px;
+                height: 500px;
+                background-color: #000000;
+                position: relative;
+            }
+            .fullscreen-btn, .return-home-btn {
+                font-family: 'Micro 5', sans-serif;
+                background: url('../images/button.png') no-repeat center center;
+                background-size: cover;
+                color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                text-shadow: 1px 1px 0px #000000;
+                margin: 10px;
+            }
+            .fullscreen-btn {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="above-game">
+            Your game will load here
+            <button class="return-home-btn" onclick="returnHome()">Return Home</button>
+        </div>
+        <div class="game-viewport" id="gameViewport">
+            <button class="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+        </div>
+        <script>
+            function returnHome() {
+                window.location.href = '../index.html';
+            }
+
+            function toggleFullscreen() {
+                var elem = document.getElementById("gameViewport");
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            }
+
+            // Assuming you have some way to get the game data to load
+            // For example, using URL parameters
+            window.onload = function() {
+                var urlParams = new URLSearchParams(window.location.search);
+                var gameToLoad = urlParams.get('game');
+                if (gameToLoad) {
+                    // Load the game (this is just a placeholder, actual implementation will depend on how your game is loaded)
+                    var gameIframe = document.createElement('iframe');
+                    gameIframe.src = gameToLoad;
+                    gameIframe.style.width = '100%';
+                    gameIframe.style.height = '100%';
+                    gameIframe.style.border = 'none';
+                    document.getElementById('gameViewport').appendChild(gameIframe);
+                }
+            };
+        </script>
+    </body>
+</html>
