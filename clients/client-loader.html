@@ -85,8 +85,6 @@
             }
         }
 
-        // Assuming you have some way to get the game data to load
-        // For example, using URL parameters
         window.onload = function() {
             var urlParams = new URLSearchParams(window.location.search);
             var gameToLoad = urlParams.get('game');
@@ -95,7 +93,7 @@
                 var loadingScreen = document.getElementById('loadingScreen');
                 loadingScreen.style.display = 'flex';
 
-                // Load the game (this is just a placeholder, actual implementation will depend on how your game is loaded)
+                // Load the game in an iframe
                 var gameIframe = document.createElement('iframe');
                 gameIframe.src = gameToLoad;
                 gameIframe.style.width = '100%';
