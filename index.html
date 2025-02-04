@@ -50,7 +50,8 @@
     <script>
         document.getElementById('launchButton').addEventListener('click', function() {
             var selectedVersion = document.getElementById('eaglerDropdown').value;
-            window.location.href = 'clients/client-loader.html?game=' + encodeURIComponent(selectedVersion);
+            localStorage.setItem('gameToLoad', selectedVersion);
+            window.location.href = 'clients/client-loader.html';
         });
 
         document.getElementById('uploadButton').addEventListener('click', function() {
@@ -64,9 +65,9 @@
                 reader.onload = function(e) {
                     var content = e.target.result;
                     if (content.includes('Eaglercraft')) {
-                        alert('Eaglercraft file loaded successfully!');
-                        // Assuming content includes the path to the game
-                        window.location.href = 'clients/client-loader.html?game=' + encodeURIComponent(content);
+                        //alert('Eaglercraft file loaded successfully!');
+                        localStorage.setItem('gameToLoad', content);
+                        window.location.href = 'clients/client-loader.html';
                     } else {
                         alert('The uploaded file is not a valid Eaglercraft file.');
                     }

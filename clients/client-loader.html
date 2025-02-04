@@ -86,8 +86,7 @@
         }
 
         window.onload = function() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var gameToLoad = urlParams.get('game');
+            var gameToLoad = localStorage.getItem('gameToLoad');
             if (gameToLoad) {
                 // Display the loading screen
                 var loadingScreen = document.getElementById('loadingScreen');
@@ -104,6 +103,9 @@
                     loadingScreen.style.display = 'none';
                 };
                 document.getElementById('gameViewport').appendChild(gameIframe);
+
+                // Clear the game data from local storage
+                localStorage.removeItem('gameToLoad');
             }
         };
     </script>
