@@ -127,7 +127,7 @@
         function loadGameManually() {
             var gameToLoad = localStorage.getItem('gameToLoad');
             if (gameToLoad) {
-                window.location.href = gameToLoad;
+                window.open(gameToLoad);
             }
         }
 
@@ -153,16 +153,16 @@
                     loadingScreen.style.display = 'none';
                 };
                 document.getElementById('gameViewport').appendChild(gameIframe);
-
-                // Show load fallback after 5 seconds
-                setTimeout(function() {
-                    var loadFallback = document.getElementById('loadFallback');
-                    loadFallback.classList.add('show');
-                }, 5000);
-
-                // Clear the game data from local storage
-                localStorage.removeItem('gameToLoad');
             }
+
+            // Show load fallback after 5 seconds
+            setTimeout(function() {
+                var loadFallback = document.getElementById('loadFallback');
+                loadFallback.classList.add('show');
+            }, 5000);
+
+            // Clear the game data from local storage
+            localStorage.removeItem('gameToLoad');
         };
     </script>
 </body>
