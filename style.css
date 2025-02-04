@@ -32,4 +32,10 @@ a:visited {
 
 div {
     display:inline-block;
+    margin: 110%;
 }
+
+.servlist {
+    background-color: rgb(139, 226, 255);
+}
+
