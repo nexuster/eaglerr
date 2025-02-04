@@ -1,51 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-    font-family: "Lexend", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    font-style: oblique;
+    font-style: normal;
+    color: #00ff00;
+    text-shadow: 2px 2px 0px #000000;
+    margin: 20px 0;
 }
 
 a {
     text-decoration: none;
-    font-style: oblique;
-    color: dodgerblue;
+    font-style: normal;
+    color: #00ff00;
+    text-shadow: 1px 1px 0px #000000;
+    font-size: 1.2em;
 }
 
 a:hover {
     text-decoration: underline;
-    font-style: oblique;
-    color: rgb(0, 68, 255);
+    color: #00cc00;
 }
 
 a:visited {
-    text-decoration: underline;
-    font-style: oblique;
-    color: rgb(162, 0, 255);
+    color: #00ff00;
 }
 
 div {
-    display: inline-block;
-    padding: 12px;
-    background-color: white;
+    display: block;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    margin: 20px auto;
     width: 80%;
-    margin: 0 auto;
+    max-width: 800px;
 }
 
 .servlist {
-    background-color: rgb(139, 226, 255);
+    background-color: #3b3b3b;
 }
 
-.splash {
-    height: 100vh;
-    width: 100%;
-    position: sticky;
-    object-fit: cover;
-    top: 0;
-    margin: 0 auto;
-    z-index: -2;
+.splashdiv {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#eaglerDropdown {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#launchButton {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #00ff00;
+    color: #000000;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#launchButton:hover {
+    background-color: #00cc00;
+    border-color: #00cc00;
+}
+
+ul, ol {
+    text-align: left;
+    margin: 10px auto;
+    padding: 0;
+    list-style: none;
+}
+
+ul li, ol li {
+    background-color: #4b4b4b;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
