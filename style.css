@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: 'Minecraft', sans-serif;
+    font-family: 'Minecraft';
     background: url('images/splash.webp') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
@@ -61,7 +61,7 @@ a:visited {
 }
 
 #eaglerDropdown {
-    font-family: 'Minecraft', sans-serif;
+    font-family: 'Minecraft';
     background-color: #2b2b2b;
     color: #ffffff;
     border: 2px solid #00ff00;
@@ -71,7 +71,7 @@ a:visited {
 }
 
 button {
-    font-family: 'Minecraft', sans-serif;
+    font-family: 'Minecraft';
     background: url('images/button.png') no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
