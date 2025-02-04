@@ -39,3 +39,8 @@ div {
     background-color: rgb(139, 226, 255);
 }
 
+.splash {
+    object-fit: cover;
+    position: sticky;
+    z-index:-10;
+}
