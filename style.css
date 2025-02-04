@@ -46,10 +46,10 @@ div {
 
     height: 100%;
     
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 0;
+    position: sticky;
+    /*repeat: no-repeat;*/
+    object-fit: cover;
+    z-index: -2;
 
     position: absolute;
 }
