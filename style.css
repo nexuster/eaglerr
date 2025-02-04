@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1 {
+    font-style: oblique;
+}
+
+a {
+    /* text-decoration: none; */
+    font-style: oblique;
+    color: dodgerblue;
+}
+
+a:hover {
+    /* text-decoration: none; */
+    text-decoration: underline;
+    font-style: oblique;
+    color: rgb(0, 68, 255);
+}
+
+a:visited {
+    /* text-decoration: none; */
+    text-decoration: underline;
+    font-style: oblique, italic;
+    color: rgb(162, 0, 255);
+}
