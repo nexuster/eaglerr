@@ -39,7 +39,7 @@ div {
 div {
     background-color: white;
     height: 100vh;
-    width: calc(50vw - 480px);
+    width: calc(240vw - 480px);
 }
 
 .servlist {
@@ -53,7 +53,7 @@ div {
     height: 120%;
     width: 120%;
     
-    position: sticky, center;
+    position: fixed, center;
     /*repeat: no-repeat;*/
     object-fit: cover;
     z-index: -2;
