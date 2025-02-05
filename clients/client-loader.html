@@ -135,7 +135,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var gameToLoad = urlParams.get('game');
             if (gameToLoad) {
-                window.open('./clients/' + gameToLoad);
+                window.open(gameToLoad);
             }
         }
 
@@ -155,7 +155,7 @@
 
                 // Load the game in an iframe
                 var gameIframe = document.createElement('iframe');
-                gameIframe.src = gameToLoad;
+                gameIframe.src = 'client/' + gameToLoad;
                 gameIframe.style.width = '100%';
                 gameIframe.style.height = '100%';
                 gameIframe.style.border = 'none';
