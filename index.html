@@ -10,9 +10,9 @@
         <h1>Choose your Eagler! (Regularly updated)</h1>
         <label for="eaglerDropdown">Select Eagler Version:</label>
         <select id="eaglerDropdown">
-            <option value="clients/X1-8-u49.html">EaglercraftX 1.8 (Full access to all things)</option>
-            <option value="clients/eaglerX1-8.html">EaglercraftX 1.8 u48 version</option>
-            <option value="clients/index.html">Eaglercraft 1.5.2 (Some servers like Zentic are unavailable)</option>
+            <option value="X1-8-u49.html">EaglercraftX 1.8 (Full access to all things)</option>
+            <option value="eaglerX1-8.html">EaglercraftX 1.8 u48 version</option>
+            <option value="index.html">Eaglercraft 1.5.2 (Some servers like Zentic are unavailable)</option>
         </select>
         <button id="launchButton">Launch</button>
         <input type="file" id="uploadFile" style="display:none"/>
@@ -50,8 +50,7 @@
     <script>
         document.getElementById('launchButton').addEventListener('click', function() {
             var selectedVersion = document.getElementById('eaglerDropdown').value;
-            var gameFile = selectedVersion.replace('clients/', ''); // Remove 'clients/' from the value
-            window.location.href = 'clients/client-loader.html?game=' + encodeURIComponent(gameFile);
+            window.location.href = 'clients/client-loader.html?game=' + encodeURIComponent(selectedVersion);
         });
 
         document.getElementById('uploadButton').addEventListener('click', function() {

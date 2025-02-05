@@ -128,7 +128,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var gameToLoad = urlParams.get('game');
             if (gameToLoad) {
-                window.open('./' + gameToLoad);
+                window.open('./clients/' + gameToLoad);
             }
         }
 
@@ -140,7 +140,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var gameToLoad = urlParams.get('game');
             if (gameToLoad) {
-                gameToLoad = './' + gameToLoad;
+                gameToLoad = 'clients/' + gameToLoad;
 
                 // Display the loading screen
                 var loadingScreen = document.getElementById('loadingScreen');
