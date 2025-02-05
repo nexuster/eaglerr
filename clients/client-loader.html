@@ -147,7 +147,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var gameToLoad = urlParams.get('game');
             if (gameToLoad) {
-                gameToLoad = 'clients/' + gameToLoad;
+                gameToLoad = gameToLoad;
 
                 // Display the loading screen
                 var loadingScreen = document.getElementById('loadingScreen');
