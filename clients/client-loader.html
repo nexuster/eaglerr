@@ -90,6 +90,12 @@
             cursor: pointer;
             margin-left: 10px;
         }
+        .loaded-text {
+            text-align: center;
+            margin-top: 10px;
+            color: #ffffff;
+            font-family: 'Micro 5', sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +107,7 @@
         <div class="loading-screen" id="loadingScreen">Loading...</div>
         <button class="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
     </div>
+    <div class="loaded-text" id="loadedText"></div>
     <div class="load-fallback" id="loadFallback">
         If the viewport doesn’t load the game, you can try loading it here:
         <button onclick="loadGameManually()">Go</button>
@@ -128,7 +135,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var gameToLoad = urlParams.get('game');
             if (gameToLoad) {
-                window.open(gameToLoad);
+                window.open('./clients/' + gameToLoad);
             }
         }
 
@@ -140,7 +147,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var gameToLoad = urlParams.get('game');
             if (gameToLoad) {
-                gameToLoad = './clients' + gameToLoad;
+                gameToLoad = 'clients/' + gameToLoad;
 
                 // Display the loading screen
                 var loadingScreen = document.getElementById('loadingScreen');
@@ -157,6 +164,10 @@
                     loadingScreen.style.display = 'none';
                 };
                 document.getElementById('gameViewport').appendChild(gameIframe);
+
+                // Display the loaded text
+                var loadedText = document.getElementById('loadedText');
+                loadedText.textContent = 'loaded: ' + gameToLoad;
             }
 
             // Show load fallback after 5 seconds
